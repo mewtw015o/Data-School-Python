@@ -15,8 +15,8 @@ train.Name.str.split(',').apply(get_element, positions=0).head()
 train.Name.str.split(',').apply(lambda x : x[0]).head()
 
 ### .apply DataFrame
-drinks.loc[:, 'beer_servings' : 'wine_serviings'].apply(max, axis=0)  #Max of each columns; "Traveling Down"
-drinks.loc[:, 'beer_servings' : 'wine_serviings'].apply(max, axis=1)  #Max of each rows; "Traveling Down"
+drinks.loc[:, 'beer_servings' : 'wine_serviings'].apply(max, axis=0)  #Max of each columns; Max function applies to the data while "Traveling Down"
+drinks.loc[:, 'beer_servings' : 'wine_serviings'].apply(max, axis=1)  #Max of each rows; Max function applies to the data while "Traveling Horizon"
 drinks.loc[:, 'beer_servings' : 'wine_serviings'].apply(argmax, axis=1)  #Return the column name of the max
 
 ## .applymap - applying to every element in the data frame
